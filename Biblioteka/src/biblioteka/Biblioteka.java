@@ -10,6 +10,10 @@ public class Biblioteka implements BibliotekaInterfejs {
 	
 	@Override
 	public void dodajKnjigu(Knjiga knjiga) {
+		if(knjiga == null)
+			throw new NullPointerException("Knjiga ne sme biti null");
+		if(knjige.contains(knjiga))
+			throw new IllegalArgumentException("Knjiga je duplikat");
 		knjige.add(knjiga);
 	}
 
@@ -25,11 +29,9 @@ public class Biblioteka implements BibliotekaInterfejs {
 
 	@Override
 	public List<Knjiga> pronadjiKnjigu(Autor autor, long isbn, String naslov, String izdavac) {
-		if(autor == null) {
-			throw new IllegalArgumentException();
+		if(autor == null && isbn <= 0 && (naslov == null || naslov.equals("")) && (izdavac == null || izdavac == "")) {
+			return null;
 		}
-		if(isbn <= 0)
-			throw new IllegalArgumentException();
 		List<Knjiga> vraceneKnjige = new ArrayList<>();
 		for (Knjiga knjiga : knjige) {
 			if(knjiga.getIsbn() == isbn) {
