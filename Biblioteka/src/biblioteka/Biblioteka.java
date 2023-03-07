@@ -8,6 +8,9 @@ import biblioteka.interfejs.BibliotekaInterfejs;
 public class Biblioteka implements BibliotekaInterfejs {
 	private List<Knjiga> knjige = new ArrayList();
 	
+	
+	
+	//Pravi komentar, pravi kod
 	@Override
 	public void dodajKnjigu(Knjiga knjiga) {
 		if(knjiga == null)
