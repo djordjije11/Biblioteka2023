@@ -5,6 +5,8 @@ import java.util.List;
 
 import biblioteka.interfejs.BibliotekaInterfejs;
 
+// Ova klasa predstavlja pravu papazjaniju
+// Ali ono bas...
 public class Biblioteka implements BibliotekaInterfejs {
 	private List<Knjiga> knjige = new ArrayList();
 	
