@@ -25,6 +25,11 @@ public class Biblioteka implements BibliotekaInterfejs {
 
 	@Override
 	public List<Knjiga> pronadjiKnjigu(Autor autor, long isbn, String naslov, String izdavac) {
+		if(autor == null) {
+			throw new IllegalArgumentException();
+		}
+		if(isbn <= 0)
+			throw new IllegalArgumentException();
 		List<Knjiga> vraceneKnjige = new ArrayList<>();
 		for (Knjiga knjiga : knjige) {
 			if(knjiga.getIsbn() == isbn) {
