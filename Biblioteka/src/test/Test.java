@@ -12,6 +12,7 @@ public class Test {
 		Autor b = new Autor();
 		b.setIme("Pera");
 		b.setIme("Peric");
+		System.out.println(a == b);
 		System.out.println(a.hashCode() == b.hashCode());
 	}
 
