@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
+
 import biblioteka.Knjiga;
 
 public abstract class BibliotekaInterfejsTest {
@@ -44,9 +46,11 @@ public abstract class BibliotekaInterfejsTest {
 		fail("Not yet implemented");
 	}
 
-	//@Test
+	@Test
+	@Timeout(3)
 	void testVratiSveKnjige() {
-		fail("Not yet implemented");
+		//ovde npr neka beskonacna while petlja, i nakon 3 sekunde ce stati, puknuti
+		//fail("Not yet implemented");
 	}
 
 	//@Test
