@@ -58,4 +58,11 @@ public class Knjiga {
 		}
 		this.izdanje = izdanje;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Knjiga knjiga) {
+			return this.isbn == knjiga.getIsbn();
+		} else return false;
+	}
 }
