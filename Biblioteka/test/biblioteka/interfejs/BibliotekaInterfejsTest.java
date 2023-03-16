@@ -3,6 +3,7 @@ package biblioteka.interfejs;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
@@ -13,8 +14,6 @@ public abstract class BibliotekaInterfejsTest {
 
 	protected BibliotekaInterfejs biblioteka;
 	
-	
-
 	@Test
 	void testDodajKnjiguNull() {
 		assertThrows(NullPointerException.class, () -> biblioteka.dodajKnjigu(null));
@@ -47,9 +46,14 @@ public abstract class BibliotekaInterfejsTest {
 	}
 
 	@Test
-	@Timeout(3)
+	@Timeout(value = 3, unit = TimeUnit.SECONDS)
 	void testVratiSveKnjige() {
 		//ovde npr neka beskonacna while petlja, i nakon 3 sekunde ce stati, puknuti
+		
+		while(true) {
+			
+		}
+		
 		//fail("Not yet implemented");
 	}
 
