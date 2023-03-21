@@ -5,11 +5,17 @@ import java.util.List;
 
 import biblioteka.interfejs.BibliotekaInterfejs;
 
-// Ova klasa predstavlja pravu papazjaniju
-// Ali ono bas...
+/**
+ * Implementacija interfejsa BibliotekaInterfejs
+ * @author djordjije11
+ *
+ */
 public class Biblioteka implements BibliotekaInterfejs {
+	/**
+	 * Lista sa knjigama iz biblioteke - ArrayList implementacija
+	 * @see biblioteka.Knjiga
+	 */
 	private List<Knjiga> knjige = new ArrayList();
-	
 	@Override
 	public void dodajKnjigu(Knjiga knjiga) {
 		if(knjiga == null)
